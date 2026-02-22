@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Data Center Intelligence — Shreyansh Agarwal</title>
+<meta name="author" content="Shreyansh Agarwal">
+<meta name="description" content="India Data Center Partnership & Stock Intelligence Report 2025-26 by Shreyansh Agarwal (@agshreyansh9)">
+<meta property="og:title" content="India Data Center Intelligence — Shreyansh Agarwal">
+<meta property="og:description" content="Every major data center partnership in India. Every listed stock. The intelligent investor's complete guide.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,700;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0f;
+    --paper: #f5f0e8;
+    --accent: #e8451a;
+    --gold: #c9a84c;
+    --dim: #6b6560;
+    --green: #1a7a4a;
+    --amber: #d97706;
+    --red: #dc2626;
+    --blue: #1d4ed8;
+    --grid: #ddd8cc;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Mono', monospace;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0;
+    border-bottom: 4px solid var(--accent);
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.03) 60px,
+      rgba(255,255,255,0.03) 61px
+    );
+  }
+  .masthead-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: end;
+  }
+  .issue-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .masthead h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 6vw, 80px);
+    letter-spacing: 2px;
+    line-height: 0.9;
+    color: var(--paper);
+  }
+  .masthead h1 span { color: var(--accent); }
+  .meta-block {
+    text-align: right;
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 1px;
+  }
+  .meta-block .big { font-size: 22px; color: var(--gold); font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; display: block; }
+
+  /* TICKER BAR */
+  .ticker-bar {
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 40s linear infinite;
+    gap: 0;
+  }
+  .ticker-inner span { padding: 0 40px; border-right: 1px solid rgba(255,255,255,0.3); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* LAYOUT */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+  /* SECTION HEADER */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 48px 0 24px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 32px;
+  }
+  .section-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: var(--grid);
+    line-height: 1;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 2px;
+    margin-left: auto;
+    text-transform: uppercase;
+  }
+
+  /* PARTNERSHIP CARDS */
+  .partnership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2px;
+    margin-bottom: 60px;
+    background: var(--ink);
+    border: 2px solid var(--ink);
+  }
+  .p-card {
+    background: var(--paper);
+    padding: 24px;
+    position: relative;
+    transition: background 0.2s;
+  }
+  .p-card:hover { background: #ede8dc; }
+  .p-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .p-type {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3px 8px;
+  }
+  .p-year {
+    font-size: 10px;
+    color: var(--dim);
+    letter-spacing: 1px;
+  }
+  .p-companies {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .p-co {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .p-co.anchor { color: var(--accent); }
+  .p-arrow {
+    font-size: 16px;
+    color: var(--dim);
+  }
+  .p-deal {
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .p-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--grid);
+  }
+  .p-size {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: var(--green);
+    letter-spacing: 1px;
+  }
+  .p-location {
+    font-size: 10px;
+    color: var(--dim);
+    letter-spacing: 1px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 9px;
+    padding: 2px 6px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .tag-ai { background: #fef3c7; color: #92400e; }
+  .tag-cloud { background: #dbeafe; color: #1e3a8a; }
+  .tag-infra { background: #dcfce7; color: #14532d; }
+  .tag-pe { background: #f3e8ff; color: #581c87; }
+
+  /* STOCK TABLE */
+  .stock-section { margin-bottom: 60px; }
+  .stock-table { width: 100%; border-collapse: collapse; }
+  .stock-table thead th {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--ink);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 500;
+  }
+  .stock-table thead th:not(:first-child) { text-align: right; }
+  .stock-table tbody tr {
+    border-bottom: 1px solid var(--grid);
+    transition: background 0.15s;
+  }
+  .stock-table tbody tr:hover { background: #ede8dc; }
+  .stock-table tbody td {
+    padding: 14px 16px;
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  .stock-table tbody td:not(:first-child):not(:nth-child(2)) { text-align: right; }
+  .company-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+  }
+  .ticker-symbol {
+    font-size: 10px;
+    color: var(--dim);
+    letter-spacing: 1px;
+  }
+  .verdict {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .v-buy { background: #dcfce7; color: #14532d; }
+  .v-watch { background: #fef3c7; color: #92400e; }
+  .v-avoid { background: #fee2e2; color: #7f1d1d; }
+  .v-monitor { background: #dbeafe; color: #1e3a8a; }
+
+  /* VALUATION METER */
+  .val-bar-wrap { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+  .val-bar { width: 60px; height: 6px; background: var(--grid); border-radius: 2px; overflow: hidden; }
+  .val-fill { height: 100%; border-radius: 2px; }
+  .fill-green { background: var(--green); }
+  .fill-amber { background: var(--amber); }
+  .fill-red { background: var(--red); }
+
+  /* ANALYST INSIGHT BOXES */
+  .insight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--ink);
+    border: 2px solid var(--ink);
+    margin-bottom: 60px;
+  }
+  .insight-box {
+    background: var(--paper);
+    padding: 28px 24px;
+  }
+  .insight-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .insight-val {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .insight-desc {
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+
+  /* RISK MATRIX */
+  .risk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 60px;
+  }
+  .risk-box {
+    border: 2px solid var(--ink);
+    padding: 24px;
+  }
+  .risk-box h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .risk-icon { font-size: 20px; }
+  .risk-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+  .risk-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  .dot-green { background: var(--green); }
+  .dot-red { background: var(--red); }
+
+  /* FOOTER */
+  .report-footer {
+    background: var(--ink);
+    color: var(--dim);
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 24px 40px;
+    text-align: center;
+    border-top: 4px solid var(--accent);
+    line-height: 1.7;
+  }
+  .disclaimer {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .disclaimer strong { color: var(--accent); }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--paper); }
+  ::-webkit-scrollbar-thumb { background: var(--ink); }
+
+  /* AUTHOR BADGE */
+  .author-badge {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: var(--ink);
+    border: 2px solid var(--gold);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 999;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+  }
+  .author-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  }
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .author-info-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--paper);
+    white-space: nowrap;
+  }
+  .author-info-handle {
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .masthead-inner { grid-template-columns: 1fr; }
+    .insight-grid { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 16px; }
+    .masthead-inner { padding: 24px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- FLOATING AUTHOR BADGE -->
+<a class="author-badge" href="https://github.com/agshreyansh9" target="_blank">
+  <div class="author-avatar">SA</div>
+  <div>
+    <div class="author-info-name">Shreyansh Agarwal</div>
+    <div class="author-info-handle">⭐ github.com/agshreyansh9</div>
+  </div>
+</a>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <div class="issue-tag">▸ Analyst Intelligence Report · Vol. 1 · Issue 4 · By Shreyansh Agarwal</div>
+      <h1>INDIA <span>DATA</span><br>CENTER<br>INTELLIGENCE</h1>
+    </div>
+    <div class="meta-block">
+      <span class="big">$12.85B</span>
+      Market Size by 2033<br>
+      CAGR: 10.43%<br><br>
+      <span style="color:var(--gold)">FEB 22, 2026</span><br>
+      Bengaluru, IN<br>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span>ADANIENT.NS ▲ ₹2,994 Cr Mkt Cap</span>
+    <span>BHARTIARTL.NS ▲ ₹1,985 | P/E 30.49</span>
+    <span>SIFY NASDAQ ▲ $14.73 | 52W: $3.5–$17.85</span>
+    <span>TCS.NS ▲ HyperVault $2B | OpenAI Deal</span>
+    <span>RELIANCE.NS ▲ 1GW Jamnagar | NVIDIA Partnership</span>
+    <span>India DC Market ▲ 950MW → 1800MW by 2026</span>
+    <span>ADANIENT.NS ▲ ₹2,994 Cr Mkt Cap</span>
+    <span>BHARTIARTL.NS ▲ ₹1,985 | P/E 30.49</span>
+    <span>SIFY NASDAQ ▲ $14.73 | 52W: $3.5–$17.85</span>
+    <span>TCS.NS ▲ HyperVault $2B | OpenAI Deal</span>
+    <span>RELIANCE.NS ▲ 1GW Jamnagar | NVIDIA Partnership</span>
+    <span>India DC Market ▲ 950MW → 1800MW by 2026</span>
+  </div>
+</div>
+
+<!-- MARKET STATS -->
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">00</div>
+    <div class="section-title">Market Snapshot</div>
+    <div class="section-sub">India Data Centre Ecosystem · 2025-26</div>
+  </div>
+
+  <div class="insight-grid">
+    <div class="insight-box">
+      <div class="insight-label">Total DC Capacity (2024)</div>
+      <div class="insight-val">950<span style="font-size:24px">MW</span></div>
+      <div class="insight-desc">Expected to hit 1,800 MW by 2026 — a near doubling. Mumbai accounts for 52% of total capacity.</div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-label">Investments Attracted (5 Yrs)</div>
+      <div class="insight-val">$60<span style="font-size:24px">B</span></div>
+      <div class="insight-desc">India attracted ~$60B in data center investments between 2019-2024, growing at 24% CAGR.</div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-label">Build Cost Advantage</div>
+      <div class="insight-val">$7<span style="font-size:24px">/W</span></div>
+      <div class="insight-desc">India builds at $7/W vs $10/W US, $11/W UK — a massive cost advantage attracting global capital.</div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-label">Market Value (2024)</div>
+      <div class="insight-val">$5.03<span style="font-size:24px">B</span></div>
+      <div class="insight-desc">Projected to reach $12.85B by 2033 at 10.43% CAGR, powered by AI and cloud adoption.</div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-label">GPUs Deployed (IndiaAI)</div>
+      <div class="insight-val">17K<span style="font-size:24px">+</span></div>
+      <div class="insight-desc">17,000 GPUs already deployed by Yotta, Netmagic & Sify. 34,000 committed under IndiaAI Mission (₹10,372 Cr outlay).</div>
+    </div>
+    <div class="insight-box">
+      <div class="insight-label">Power Capacity</div>
+      <div class="insight-val">452<span style="font-size:24px">GW</span></div>
+      <div class="insight-desc">India's total installed power capacity. DCs consume &lt;0.5% — massive headroom for explosive growth.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNERSHIPS SECTION -->
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">01</div>
+    <div class="section-title">Data Centre Partnerships in India</div>
+    <div class="section-sub">Both Companies · Deal Size · Type</div>
+  </div>
+
+  <div class="partnership-grid">
+
+    <!-- GOOGLE + ADANICONNEX + AIRTEL -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-ai">AI · Hyperscale</span></div>
+        <div class="p-year">2025</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Google</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">AdaniConneX</div>
+        <div class="p-arrow">+</div>
+        <div class="p-co">Airtel</div>
+      </div>
+      <div class="p-deal">Google's $15B AI data center campus at Visakhapatnam. Developed with AdaniConneX (Adani+EdgeConneX JV) and Airtel. Gigawatt-scale campus with a new subsea cable landing station on India's east coast.</div>
+      <div class="p-footer">
+        <div class="p-size">$15B</div>
+        <div class="p-location">📍 Visakhapatnam (AP)</div>
+      </div>
+    </div>
+
+    <!-- OPENAI + TCS (HYPERVAULT) -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-ai">AI · Stargate</span></div>
+        <div class="p-year">Feb 2026</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">OpenAI</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">TCS (HyperVault)</div>
+      </div>
+      <div class="p-deal">OpenAI becomes first customer of TCS's HyperVault data center. Starting at 100MW, with a path to 1GW. Part of OpenAI's Stargate project. TCS backed by PE firm TPG with $2B. ChatGPT Enterprise deployed across Tata's workforce.</div>
+      <div class="p-footer">
+        <div class="p-size">$2B</div>
+        <div class="p-location">📍 Pan-India</div>
+      </div>
+    </div>
+
+    <!-- RELIANCE + NVIDIA -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-ai">AI · Infrastructure</span></div>
+        <div class="p-year">Jan 2025</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Reliance Industries</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">NVIDIA</div>
+      </div>
+      <div class="p-deal">Reliance's 1GW data center in Jamnagar using NVIDIA Blackwell AI processors. Aims to triple India's total data center capacity once operational. Powered by renewable energy — supports large-scale LLM training.</div>
+      <div class="p-footer">
+        <div class="p-size">1 GW</div>
+        <div class="p-location">📍 Jamnagar, Gujarat</div>
+      </div>
+    </div>
+
+    <!-- ADANICONNEX + GOOGLE (NOIDA) -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-cloud">Cloud · Hyperscale</span></div>
+        <div class="p-year">2024</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">AdaniConneX</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">Google</div>
+      </div>
+      <div class="p-deal">Google leased a 464,000 sq ft facility at the Adani Centre in Noida. AdaniConneX is a 50:50 JV between Adani Enterprises and EdgeConneX (US-based), developing India's largest AI data centre campus.</div>
+      <div class="p-footer">
+        <div class="p-size">464K sqft</div>
+        <div class="p-location">📍 Noida, UP</div>
+      </div>
+    </div>
+
+    <!-- COLT DC + RMZ CORP -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-infra">JV · Infrastructure</span></div>
+        <div class="p-year">Nov 2024</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Colt Data Centre Services</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">RMZ Corp</div>
+      </div>
+      <div class="p-deal">Joint venture between UK-based Colt DC Services and Indian real estate giant RMZ Corp to develop over 250MW of data center capacity. Focus on Navi Mumbai and Chennai, driven by AI and cloud demand.</div>
+      <div class="p-footer">
+        <div class="p-size">$1.7B</div>
+        <div class="p-location">📍 Mumbai · Chennai</div>
+      </div>
+    </div>
+
+    <!-- STT GDC + MAHARASHTRA GOVT -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-infra">Govt MoU · Infra</span></div>
+        <div class="p-year">2024-25</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">ST Telemedia GDC</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">Maharashtra Govt + Telangana Govt</div>
+      </div>
+      <div class="p-deal">STT GDC (Singapore) partnered with Maharashtra Govt ($568M) and signed MoU with Telangana to build a campus in Mucherla, Hyderabad ($412M). Also began constructing two DCs in Navi Mumbai.</div>
+      <div class="p-footer">
+        <div class="p-size">$3.2B total</div>
+        <div class="p-location">📍 Mumbai · Hyderabad</div>
+      </div>
+    </div>
+
+    <!-- GOOGLE + RAIDEN INFOTECH (NAVI MUMBAI) -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-cloud">Cloud · Colocation</span></div>
+        <div class="p-year">2024-25</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Google</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">Raiden Infotech</div>
+      </div>
+      <div class="p-deal">Google developing an 8-storey, 381,000 sq ft data center in Navi Mumbai in partnership with Raiden Infotech. Investment of ₹1,144 Cr over first 10 years. Expected to be complete by 2025.</div>
+      <div class="p-footer">
+        <div class="p-size">₹1,144 Cr</div>
+        <div class="p-location">📍 Navi Mumbai</div>
+      </div>
+    </div>
+
+    <!-- SIFY + INDIAAI MISSION -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-ai">Govt · AI Mission</span></div>
+        <div class="p-year">2024-25</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Sify Technologies</div>
+        <div class="p-arrow">+</div>
+        <div class="p-co">Yotta</div>
+        <div class="p-arrow">+</div>
+        <div class="p-co">Netmagic</div>
+      </div>
+      <div class="p-deal">All three operators supply compute power under IndiaAI Mission (₹10,372 Cr). Combined 17,000 GPUs deployed. Sify also partnered with NVIDIA — first in India to achieve NVIDIA DGX-Ready Data Center Certification for Liquid Cooling.</div>
+      <div class="p-footer">
+        <div class="p-size">₹10,372 Cr</div>
+        <div class="p-location">📍 Pan-India</div>
+      </div>
+    </div>
+
+    <!-- TCS + TPG PE DEAL -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-pe">PE · Growth Capital</span></div>
+        <div class="p-year">Nov 2025</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">TCS (HyperVault)</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">TPG (PE Firm)</div>
+      </div>
+      <div class="p-deal">TCS's data center subsidiary HyperVault received $2B backing from US private equity giant TPG to develop AI-ready infrastructure. Platform designed to support large-scale compute workloads for hyperscalers and enterprises.</div>
+      <div class="p-footer">
+        <div class="p-size">₹18,000 Cr</div>
+        <div class="p-location">📍 Pan-India</div>
+      </div>
+    </div>
+
+    <!-- EQUINIX + CLEANMAX -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-infra">Green · Renewable</span></div>
+        <div class="p-year">2024-25</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Equinix</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">CleanMax Energy</div>
+      </div>
+      <div class="p-deal">Equinix signed a 33MW renewable energy Power Purchase Agreement with Indian developer CleanMax for its Indian data centers. Also opened its first AI-ready data center in Chennai (Sep 2025) at $69M investment.</div>
+      <div class="p-footer">
+        <div class="p-size">$69M + PPA</div>
+        <div class="p-location">📍 Chennai · Mumbai</div>
+      </div>
+    </div>
+
+    <!-- NTT + TELANGANA GOVT -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-infra">Expansion · MoU</span></div>
+        <div class="p-year">Dec 2025</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">NTT DATA</div>
+        <div class="p-arrow">↔</div>
+        <div class="p-co">Bengaluru 4 Campus</div>
+      </div>
+      <div class="p-deal">NTT announced ₹2,400 Cr investment to build a new 100MW data center campus in Bengaluru (Bengaluru 4) spanning 8.5 acres. Upgrading Innovation Centre for AI, digital twin, and quantum computing. 11th global innovation center.</div>
+      <div class="p-footer">
+        <div class="p-size">₹2,400 Cr</div>
+        <div class="p-location">📍 Bengaluru, KA</div>
+      </div>
+    </div>
+
+    <!-- PRINCETON DIGITAL + BANKS -->
+    <div class="p-card">
+      <div class="p-card-header">
+        <div><span class="tag tag-pe">Expansion · New Build</span></div>
+        <div class="p-year">Sep 2024</div>
+      </div>
+      <div class="p-companies">
+        <div class="p-co anchor">Princeton Digital Group</div>
+        <div class="p-arrow">+</div>
+        <div class="p-co">Expansion in Mumbai · Chennai</div>
+      </div>
+      <div class="p-deal">Princeton Digital announced $1B investment to expand data center portfolio across Chennai and Mumbai. Plans to expand MU1 campus in Mumbai by adding 3 new buildings and launch new CH1 campus in Chennai.</div>
+      <div class="p-footer">
+        <div class="p-size">$1B</div>
+        <div class="p-location">📍 Mumbai · Chennai</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STOCK ANALYSIS -->
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title">Publicly Listed Company Analysis</div>
+    <div class="section-sub">Valuation · Verdict · Risk</div>
+  </div>
+
+  <div class="stock-section">
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Exchange / Ticker</th>
+          <th>Market Cap</th>
+          <th>P/E Ratio</th>
+          <th>Data Center Role</th>
+          <th>Valuation</th>
+          <th>Analyst Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>
+            <span class="company-name">Reliance Industries</span>
+            <span class="ticker-symbol">NSE: RELIANCE</span>
+          </td>
+          <td>BSE / NSE</td>
+          <td>₹19+ L Cr</td>
+          <td>~26x</td>
+          <td>1GW Jamnagar DC + NVIDIA partnership. Poised to triple India's DC capacity.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-amber" style="width:60%"></div></div>
+              Fair
+            </div>
+          </td>
+          <td><span class="verdict v-watch">WATCH</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Bharti Airtel</span>
+            <span class="ticker-symbol">NSE: BHARTIARTL</span>
+          </td>
+          <td>NSE / BSE</td>
+          <td>~₹12.8 L Cr</td>
+          <td>30–33x</td>
+          <td>Nxtra (DC arm) + Google Vizag campus partner. Strong telecom + enterprise synergy.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-amber" style="width:70%"></div></div>
+              Premium
+            </div>
+          </td>
+          <td><span class="verdict v-watch">WATCH</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Adani Enterprises</span>
+            <span class="ticker-symbol">NSE: ADANIENT</span>
+          </td>
+          <td>NSE / BSE</td>
+          <td>~₹2.99 L Cr</td>
+          <td>66x</td>
+          <td>AdaniConneX (50:50 with EdgeConneX). Google's India DC partner. Govindpuri campus. Incubates future businesses.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-red" style="width:85%"></div></div>
+              Stretched
+            </div>
+          </td>
+          <td><span class="verdict v-avoid">EXPENSIVE</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">TCS</span>
+            <span class="ticker-symbol">NSE: TCS</span>
+          </td>
+          <td>NSE / BSE</td>
+          <td>~₹13 L Cr</td>
+          <td>~28x</td>
+          <td>HyperVault DC business — OpenAI's first partner (100MW→1GW). $2B TPG PE backing. Premier AI infrastructure play.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-green" style="width:45%"></div></div>
+              Reasonable
+            </div>
+          </td>
+          <td><span class="verdict v-buy">BUY ZONE</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Sify Technologies</span>
+            <span class="ticker-symbol">NASDAQ: SIFY</span>
+          </td>
+          <td>NASDAQ (USA)</td>
+          <td>~$1.07B</td>
+          <td>N/A (no profit)</td>
+          <td>Pure-play Indian DC operator. IndiaAI GPU deployer. NVIDIA DGX-Ready cert. Sify Infinit Spaces IPO pending. High risk, high upside.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-amber" style="width:55%"></div></div>
+              Speculative
+            </div>
+          </td>
+          <td><span class="verdict v-monitor">SPECULATIVE</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Tata Communications</span>
+            <span class="ticker-symbol">NSE: TATACOMM</span>
+          </td>
+          <td>NSE / BSE</td>
+          <td>~₹50,000 Cr</td>
+          <td>~40x</td>
+          <td>Premium DC colocation services in India with global fiber backbone. Enterprise-grade data centers across major cities.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-amber" style="width:65%"></div></div>
+              Moderate
+            </div>
+          </td>
+          <td><span class="verdict v-watch">WATCH</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Equinix</span>
+            <span class="ticker-symbol">NASDAQ: EQIX</span>
+          </td>
+          <td>NASDAQ (USA)</td>
+          <td>~$82B</td>
+          <td>~85x (REIT model)</td>
+          <td>Global DC leader with Chennai AI-ready DC ($69M). Interconnection hub with AWS, Google, Oracle tenants. Signed 33MW renewable PPA with CleanMax.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-amber" style="width:60%"></div></div>
+              Fair for REIT
+            </div>
+          </td>
+          <td><span class="verdict v-watch">WATCH</span></td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="company-name">Techno Electric & Engg.</span>
+            <span class="ticker-symbol">NSE: TECHNOE</span>
+          </td>
+          <td>NSE / BSE</td>
+          <td>~₹12,000 Cr</td>
+          <td>~32x</td>
+          <td>Parent of Techno Digital — $1B DC buildout. 40-yr power infrastructure legacy. 36MW Chennai, 18MW Noida, 13MW Kolkata. Hidden gem in DC infra space.</td>
+          <td>
+            <div class="val-bar-wrap">
+              <div class="val-bar"><div class="val-fill fill-green" style="width:35%"></div></div>
+              Undervalued
+            </div>
+          </td>
+          <td><span class="verdict v-buy">BUY ZONE</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- RISK ANALYSIS -->
+<div class="container">
+  <div class="section-header">
+    <div class="section-num">03</div>
+    <div class="section-title">Risk vs. Opportunity Matrix</div>
+    <div class="section-sub">Intelligent Investor Framework</div>
+  </div>
+
+  <div class="risk-grid">
+    <div class="risk-box">
+      <h4><span class="risk-icon">🟢</span> Bullish Tailwinds</h4>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>India builds DCs at $7/W vs $10/W US — massive FDI magnet attracting global capital.</div>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>Government's IndiaAI Mission (₹10,372 Cr) creating guaranteed demand for DC operators.</div>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>Data localization laws mandating Indian DCs — regulatory moat for domestic operators.</div>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>AI workloads expected to grow from &lt;1% to 15-20% of total DC load by 2030 — huge revenue jump.</div>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>India's power surplus (452GW) removes the classic infrastructure bottleneck.</div>
+      <div class="risk-item"><div class="risk-dot dot-green"></div>Global hyperscalers (Google, Microsoft, AWS) committed billions — demand is real and growing.</div>
+    </div>
+    <div class="risk-box">
+      <h4><span class="risk-icon">🔴</span> Key Risk Factors</h4>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Adani Group governance overhang post-Hindenburg — elevated political & regulatory risk.</div>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Most Indian DC pure-plays are unprofitable (Sify EPS ~0) — valuation depends on future growth.</div>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Massive CapEx cycles may stretch balance sheets — rising interest rates can be a headwind.</div>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Bharti Airtel Q3 FY26 net profit fell 55% — near-term earnings pressure despite revenue growth.</div>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Global VC/PE capital may rotate away from emerging markets — FX and liquidity risk.</div>
+      <div class="risk-item"><div class="risk-dot dot-red"></div>Water scarcity concerns for cooling in certain regions — ESG risk escalating for large DCs.</div>
+    </div>
+  </div>
+
+  <!-- ANALYST FRAMEWORK -->
+  <div style="border: 3px solid var(--ink); padding: 32px; margin-bottom: 60px; background: var(--ink); color: var(--paper);">
+    <div style="font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">▸ Intelligent Investor Framework — Reasonable Valuation Picks</div>
+    <div style="font-family:'Fraunces',serif; font-size:22px; font-weight:900; margin-bottom:16px; line-height:1.3;">The Two Best Risk-Adjusted Plays in India's Data Center Boom</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; font-size:12px; line-height:1.7; color:#ccc;">
+      <div>
+        <div style="color:var(--gold); font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:1px; margin-bottom:8px;">① TCS (NSE: TCS) — Steady Compounder</div>
+        With a P/E of ~28x and India's most trusted IT brand backing HyperVault, TCS offers a rare combination: a $2B AI-ready DC platform (OpenAI as anchor tenant), strong recurring IT services revenue, and a fortress balance sheet. The OpenAI-Stargate deal is a watershed — it validates HyperVault's global-grade credentials. For a patient investor, TCS's DC business is being valued near-zero by the market, representing significant embedded optionality.
+      </div>
+      <div>
+        <div style="color:var(--gold); font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:1px; margin-bottom:8px;">② Techno Electric (NSE: TECHNOE) — Hidden Gem</div>
+        The market hasn't fully priced Techno Digital's DC ambitions into Techno Electric's valuation. With 40 years of power infrastructure expertise, a $1B DC investment plan already underway, and operational facilities in Chennai, Noida, and Kolkata — this company has the DNA of an infrastructure compounder. Trading at reasonable multiples with DC as an emerging optionality. Most analysts are still covering it as a power company. That gap is the opportunity.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="report-footer">
+  <div style="max-width:800px; margin: 0 auto 28px;">
+    <div style="display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #2a2a35;">
+      <div style="text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:28px; letter-spacing:2px; color:#f5f0e8;">SHREYANSH AGARWAL</div>
+        <div style="font-size:11px; letter-spacing:2px; color:#6b6560; margin-top:2px;">ANALYST · INVESTOR · RESEARCHER</div>
+      </div>
+      <div style="width:1px; height:40px; background:#2a2a35;"></div>
+      <div style="display:flex; gap:20px; align-items:center;">
+        <a href="https://github.com/agshreyansh9" target="_blank" style="display:flex; align-items:center; gap:8px; color:#c9a84c; text-decoration:none; font-size:13px; letter-spacing:1px; transition:color 0.2s;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          github.com/agshreyansh9
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="disclaimer">
+    <strong>⚠ ANALYST DISCLAIMER:</strong> This report is compiled from publicly available news sources including TechCrunch, Analytics India Magazine, Data Center Knowledge, IMARC Group, and company filings as of February 22, 2026. All stock data is for informational purposes only. This is <strong>NOT financial advice</strong>. Stock valuations, P/E ratios, and market caps are approximate and subject to change. Always conduct your own due diligence and consult a SEBI-registered investment advisor before making any investment decisions. Past performance does not guarantee future returns. Investments in equity markets are subject to market risks.
+    <br><br>
+    Authored by <strong style="color:#c9a84c;">Shreyansh Agarwal</strong> · <a href="https://github.com/agshreyansh9" style="color:#e8451a; text-decoration:none;">@agshreyansh9</a> · Bengaluru, IN · Feb 22, 2026
+  </div>
+</footer>
+
+</body>
+</html>
